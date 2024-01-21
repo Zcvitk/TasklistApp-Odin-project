@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script defer src="main.js"></script>
+    <link rel="icon" href="./images/check_logo.png" type="icon">
+    <title>Tasklist</title>
+</head>
+<img src="./images/backgroundtodoapp.jpg" alt="">
+
+<body>
+    <header class="logoArea">
+        <div class="hiddenMenu">
+            <span class="material-icons-round">menu</span>
+        </div>
+        <div class="logoLeft">
+            <div class="logoText">
+                <span class="rotate">Tasklist </span>
+                <i class="fas fa-tasks"></i>
+              </div>
+        </div>
+        
+    </header>
+      <div class="content">
+        <div class="left_Menu">
+            <div class="home">
+                <h2 id="homeHeading">Home</h2>
+                <div class="tile selected" id="allTasks">
+                    <img src="images/alltasks.png.png" style="position: inherit; top: 10px; left: 10px;" alt="inbox">
+                    <div data-name>Tasklist</div>
+                </div>
+                <div class="tile" id="today">
+                    <img src="images/calendartoday.png.png" style="position: inherit; top: 10px; left: 10px;" alt="today">
+                    <div data-name>Today</div>
+                </div>
+                <div class="tile" id="thisWeek">
+                    <img src="images/calendarweek.png.png" style="position: inherit; top: 10px; left: 10px;" alt="thisWeek">
+                    <div data-name>In next 7 days</div>
+                </div>
+                <div class="tile" id="next30Days">
+                    <img src="images/calendar30-35x35.png.png" style="position: inherit; top: 10px; left: 10px;" alt="next30Days">
+                    <div data-name>In next 30 days</div>
+                </div>
+                <div class="tile" id="important">
+                    <img src="images/importantstarhomepanel.png.png" style="position: inherit; top: 10px; left: 10px;"  alt="star">
+                    <div data-name>Important Task/s</div>
+                </div>
+            </div>
+            <br>
+            <div class="project">
+                <h2 id="projectsHeading">Projects</h2>
+                <form id="projectForm" class="hidden" autocomplete="off">
+                    <div class="projectIcon">
+                        <span class="material-icons-round">menu</span>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" id="projectInput" placeholder="Project Name" maxlength="26">
+                        <div class="formButtons">
+                            <input type="submit" class="projectSubmitBtn" value="Add">
+                            <input type="button" class="projectCancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <button id="addProject"><span class="material-icons-round">add_circle_outlined</span>Add Project</button>
+              
+                <div class="option hidden" id="projectOption">
+                    <button>Rename</button>
+                    <button>Delete</button>
+                </div>
+                
+                <form id="renameForm" class="hidden" autocomplete="off">
+                    <div class="projectIcon">
+                        <span class="material-icons-round">menu</span>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" id="projectRenameInput" maxlength="26">
+                        <div class="formButtons">
+                            <input type="submit" class="rename-renameBtn" value="Rename">
+                            <input type="button" class="rename-cancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </div>    
+        </div>
+        <div id="right_Menu" class="right_Menu">
+            <div class="title">All Tasks</div>
+            <div class="list-todo">
+                <ul>
+                </ul>
+                
+                <div class="option hidden" id="listOption">
+                    <button id="listEdit">Edit</button>
+                    <button id="listDelete">Delete</button>
+                </div>
+                
+                <form id="editListForm" class="hidden" autocomplete="off">
+                    <div class="inputField">
+                        <label>Title:</label>
+                        <input type="text" id="editListTitle">
+                        <label>Details:</label>
+                        <textarea type="text" id="editListInputDetail" wrap="hard"></textarea>
+                        <label>Date:</label>
+                        <input type="date" id="editListInputDate" >
+                        <div class="formButtons">
+                            <input type="submit" class="editTaskSubmitBtn" value="Add">
+                            <input type="button" class="editTaskCancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+        
+                <form id="listForm" class="hidden" autocomplete="off">
+                    <div class="inputField">
+                        <label>Title:</label>
+                        <input type="text" id="listInput">
+                        <label>Details:</label>
+                        <textarea type="text" id="listInputDetail" wrap="hard"></textarea>
+                        <label>Date:</label>
+                        <input type="date" id="listInputDate" >
+                        <div class="formButtons">
+                            <input type="submit" class="listSubmitBtn" value="Add">
+                            <input type="button" class="listCancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+                <button id="addList"><span class="material-icons-round">add_circle_outlined</span>Add Task</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
